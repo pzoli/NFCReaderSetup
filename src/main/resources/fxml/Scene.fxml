@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="525.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.infokristaly.nfcreader.guisetup.FXMLController">
+    <children>
+        <Button fx:id="connectButton" layoutX="226.0" layoutY="15.0" onAction="#handleConnectButtonAction" prefHeight="30.0" prefWidth="102.0" text="Connect" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="15.0" />
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <ComboBox id="serialPortList" fx:id="serialPortList" layoutX="66.0" layoutY="15.0" prefHeight="31.0" prefWidth="173.0" AnchorPane.leftAnchor="66.0" AnchorPane.rightAnchor="137.0" AnchorPane.topAnchor="15.0" />
+      <Button fx:id="sendButton" disable="true" layoutX="171.0" layoutY="418.0" mnemonicParsing="false" onAction="#handleSendButtonAction" text="Save setup" AnchorPane.bottomAnchor="14.0" />
+      <CheckBox fx:id="chxUseDHCP" disable="true" layoutX="130.0" layoutY="116.0" mnemonicParsing="false" selected="true" text="Use DHCP" AnchorPane.leftAnchor="130.0" AnchorPane.topAnchor="116.0" />
+      <TextField fx:id="edReaderIP" disable="true" layoutX="113.0" layoutY="151.0" prefHeight="30.0" prefWidth="242.0" promptText="192.168.1.102" text="192.168.1.102" AnchorPane.leftAnchor="113.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="151.0" />
+      <TextField fx:id="edSubnetMask" disable="true" layoutX="113.0" layoutY="192.0" prefHeight="30.0" prefWidth="242.0" promptText="255.255.255.0" text="255.255.255.0" AnchorPane.leftAnchor="113.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="192.0" />
+      <TextField fx:id="edGateway" disable="true" layoutX="113.0" layoutY="234.0" prefHeight="30.0" prefWidth="242.0" promptText="192.168.1.1" text="192.168.1.1" AnchorPane.leftAnchor="113.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="234.0" />
+      <TextField fx:id="edDNS" disable="true" layoutX="113.0" layoutY="276.0" prefHeight="30.0" prefWidth="242.0" promptText="192.168.1.1" text="192.168.1.1" AnchorPane.leftAnchor="113.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="276.0" />
+      <Label layoutX="40.0" layoutY="156.0" text="Reader IP:" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="156.0" />
+      <Label layoutX="22.0" layoutY="197.0" text="Subnet mask:" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="197.0" />
+      <Label layoutX="49.0" layoutY="239.0" text="Gateway:" AnchorPane.leftAnchor="49.0" AnchorPane.topAnchor="239.0" />
+      <Label layoutX="13.0" layoutY="281.0" text="DNS server IP:" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="281.0" />
+      <Label layoutX="39.0" layoutY="371.0" text="Server IP:" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="371.0" />
+      <TextField fx:id="edServerIp" disable="true" layoutX="106.0" layoutY="366.0" prefHeight="30.0" prefWidth="250.0" promptText="192.168.1.67" text="192.168.1.67" AnchorPane.leftAnchor="106.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="366.0" />
+      <TextField fx:id="edRequest" disable="true" layoutX="106.0" layoutY="411.0" prefHeight="30.0" prefWidth="250.0" promptText="/log.php?readerId=%RID%;cardId=%CID%" text="/log.php?readerId=%RID%;cardid=%CID%" AnchorPane.leftAnchor="106.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="411.0" />
+      <Label layoutX="41.0" layoutY="416.0" text="Request:" AnchorPane.leftAnchor="41.0" AnchorPane.topAnchor="416.0" />
+      <Label contentDisplay="CENTER" layoutX="13.0" layoutY="326.0" prefHeight="27.0" prefWidth="352.0" style="-fx-background-color: lightgray;" text="Server settings" textAlignment="CENTER" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="326.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="8.0" layoutY="75.0" prefHeight="27.0" prefWidth="352.0" style="-fx-background-color: lightgray;" text="Reader settings" textAlignment="CENTER" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="75.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="20.0" text="Port:" />
+    </children>
+</AnchorPane>
