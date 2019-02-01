@@ -24,7 +24,7 @@
       <Label layoutX="13.0" layoutY="281.0" text="DNS server IP:" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="281.0" />
       <Label layoutX="39.0" layoutY="371.0" text="Server IP:" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="371.0" />
       <TextField fx:id="edServerIp" disable="true" layoutX="106.0" layoutY="366.0" prefHeight="30.0" prefWidth="250.0" promptText="192.168.1.67" text="192.168.1.67" AnchorPane.leftAnchor="106.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="366.0" />
-      <TextField fx:id="edRequest" disable="true" layoutX="106.0" layoutY="411.0" prefHeight="30.0" prefWidth="250.0" promptText="/log.php?readerId=%RID%;cardId=%CID%" text="/log.php?readerId=%RID%;cardid=%CID%" AnchorPane.leftAnchor="106.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="411.0" />
+      <TextField fx:id="edRequest" disable="true" layoutX="106.0" layoutY="411.0" prefHeight="30.0" prefWidth="250.0" promptText="/log.php?readerId=%RID%&amp;cardId=%CID%" text="/log.php?readerId=%RID%&amp;cardId=%CID%" AnchorPane.leftAnchor="106.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="411.0" />
       <Label layoutX="41.0" layoutY="416.0" text="Request:" AnchorPane.leftAnchor="41.0" AnchorPane.topAnchor="416.0" />
       <Label contentDisplay="CENTER" layoutX="13.0" layoutY="326.0" prefHeight="27.0" prefWidth="352.0" style="-fx-background-color: lightgray;" text="Server settings" textAlignment="CENTER" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="326.0">
          <font>

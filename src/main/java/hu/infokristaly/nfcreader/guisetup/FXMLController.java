@@ -72,11 +72,14 @@ public class FXMLController implements Initializable, jssc.SerialPortEventListen
     @FXML
     private void handleSendButtonAction(ActionEvent event) {
         try {
+            System.out.println("Write config");
             ReaderConfig conf = new ReaderConfig();
             conf.ip = parseIp(edReaderIP.getText());
             conf.subnet = parseIp(edSubnetMask.getText());
             conf.gateway = parseIp(edGateway.getText());
             conf.dnsserver = parseIp(edDNS.getText());
+            byte reqArray[] = edRequest.getText().getBytes("852");
+            conf.requestlen = Integer.valueOf(reqArray.length).byteValue();
             serialPort.writeBytes(new byte[]{'c', 'o', 'n', 'f', 'i', 'g', 'u', 'r', 'e', 0x0});
             serialPort.writeBytes(new byte[]{(byte)0xDE, (byte)0xAD, (byte)0xBE, (byte)0xEF, (byte)0xFE, (byte)0xED});
             serialPort.writeByte(chxUseDHCP.isSelected() ? (byte) 1 : (byte) 0);
@@ -85,8 +88,9 @@ public class FXMLController implements Initializable, jssc.SerialPortEventListen
             serialPort.writeBytes(conf.subnet);
             serialPort.writeBytes(conf.gateway);
             serialPort.writeBytes(conf.dnsserver);
-            serialPort.writeByte(Integer.valueOf(edRequest.getText().length()).byteValue());
-            serialPort.writeBytes(edRequest.getText().getBytes("852"));
+            serialPort.writeByte(conf.requestlen);
+            
+            serialPort.writeBytes(reqArray);
         } catch (SerialPortException ex) {
             Logger.getLogger(FXMLController.class.getName()).log(Level.SEVERE, null, ex);
         } catch (UnsupportedEncodingException ex) {

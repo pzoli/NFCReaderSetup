@@ -16,4 +16,5 @@ class ReaderConfig {
     public byte[] subnet = {(byte) 255, (byte) 255, (byte) 255, (byte) 0};
     public byte[] dnsserver = {(byte) 192, (byte) 168, (byte) 1, (byte) 1};
     public byte[] gateway = {(byte) 192, (byte) 168, (byte) 1, (byte) 1};    
+    public byte requestlen = 0;
 }
