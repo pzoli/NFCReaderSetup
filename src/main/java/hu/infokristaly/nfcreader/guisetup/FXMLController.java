@@ -88,7 +88,7 @@ public class FXMLController implements Initializable, jssc.SerialPortEventListen
             serialPort.writeBytes(conf.subnet);
             serialPort.writeBytes(conf.gateway);
             serialPort.writeBytes(conf.dnsserver);
-            serialPort.writeByte(conf.requestlen);
+            serialPort.writeBytes(reqArray);
             
             serialPort.writeBytes(reqArray);
         } catch (SerialPortException ex) {
